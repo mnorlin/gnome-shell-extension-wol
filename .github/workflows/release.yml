@@ -68,5 +68,5 @@ jobs:
             - name: Release Artifact
               uses: softprops/action-gh-release@v2
               with:
-                  tag_name: ${{ steps.release-please.outputs.tag_name }}
+                  tag_name: ${{ github.ref_name }}
                   files: ${{env.EXTENSION_ZIP}}
