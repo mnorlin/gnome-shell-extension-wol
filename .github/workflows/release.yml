@@ -34,7 +34,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Install gnome-extensions
-              run: sudo apt-get install -y -qq gnome-shell gettext
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y -qq gnome-shell gettext
 
             - name: Checkout Code
               uses: actions/checkout@v4
