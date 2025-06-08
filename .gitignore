@@ -1,0 +1,12 @@
+# Build
+node_modules/
+build/
+schemas/gschemas.compiled
+
+# IDE settings
+.vscode/
+.idea/
+
+# System files
+**/.DS_Store
+*~

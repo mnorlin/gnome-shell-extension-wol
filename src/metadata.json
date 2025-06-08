@@ -1,0 +1,9 @@
+{
+    "name": "Wake-on-LAN",
+    "description": "Send Wake-on-LAN (WOL) packets to servers",
+    "uuid": "wol@mnorlin.se",
+    "url": "https://github.com/mnorlin/gnome-shell-extension-wol",
+    "settings-schema": "org.gnome.shell.extensions.wol",
+    "shell-version": ["48"],
+    "gettext-domain": "wol@mnorlin.se"
+}

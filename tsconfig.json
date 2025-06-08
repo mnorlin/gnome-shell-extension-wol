@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "allowJs": true,
+        "checkJs": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "lib": ["ES2022"],
+        "noEmit": true,
+        "skipLibCheck": true
+    },
+    "include": ["ambient.d.ts", "src/**/*.js"]
+}

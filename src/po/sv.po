@@ -1,0 +1,106 @@
+# This file is distributed under the GNU General Public License
+# Martin Norlin <martin@norlin.at>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: wol@mnorlin.se\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-07 22:24+0200\n"
+"PO-Revision-Date: 2025-06-07 22:36+0200\n"
+"Last-Translator: Martin Norlin <martin@norlin.at>\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 48.0\n"
+
+#: prefs.js:22
+msgid "Wake-on-LAN extension"
+msgstr "Wake-on-LAN tillägg"
+
+#: prefs.js:60
+msgid "Add Server"
+msgstr "Lägg till server"
+
+#: prefs.js:70
+#, javascript-format
+msgid "New Server (%d)"
+msgstr "Ny server (%d)"
+
+#: prefs.js:84
+msgid "Servers"
+msgstr "Servrar"
+
+#: prefs.js:96
+msgid "General"
+msgstr "Allmänt"
+
+#: prefs.js:100 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
+msgid "Wake Timeout (seconds)"
+msgstr "Väntetid (sekunder)"
+
+#: prefs.js:102 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
+msgid "How long after wake attempt before marking server as offline"
+msgstr ""
+"Hur lång tid efter ett väckningsförsök innan servern markeras som avstängd"
+
+#: prefs.js:120 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
+msgid "Network Broadcast IP"
+msgstr "Nätverkets broadcast-adress"
+
+#: extension/indicatorButton.js:15 extension/server.js:61
+#: extension/server.js:66
+msgid "Wake-on-LAN"
+msgstr "Wake-on-LAN"
+
+#: extension/server.js:62
+#, javascript-format
+msgid "Server \"%s\" is online"
+msgstr "Servern \"%s\" är påslagen"
+
+#: extension/server.js:67
+#, javascript-format
+msgid "Server \"%s\" did not wake up"
+msgstr "Servern \"%s\" väcktes inte"
+
+#: extension/statusIcon.js:17
+msgid "Status online"
+msgstr "Status påslagen"
+
+#: extension/statusIcon.js:23
+msgid "Status offline, can be turned on"
+msgstr "Status avstängd, kan sättas på"
+
+#: extension/statusIcon.js:29
+msgid "Status offline"
+msgstr "Status avstängd"
+
+#: prefs/serverRow.js:33
+msgid "Delete Server"
+msgstr "Radera servern"
+
+#: prefs/serverRow.js:100
+msgid "Name"
+msgstr "Namn"
+
+#: prefs/serverRow.js:115
+msgid "MAC Address"
+msgstr "MAC-adress"
+
+#: prefs/serverRow.js:134
+msgid "IP Address or Domain"
+msgstr "IP-adress eller domän"
+
+#: schemas/org.gnome.shell.extensions.wol.gschema.xml:15
+msgid "Wake-on-LAN Servers"
+msgstr "Wake-on-LAN servrar"
+
+#: schemas/org.gnome.shell.extensions.wol.gschema.xml:16
+msgid ""
+"A list of servers with name, IP and MAC address, encoded as a JSON string"
+msgstr ""
+"En lista av servrar med namn, IP och MAC-adress, representerad som en JSON "
+"\"\n"
+"\"sträng"

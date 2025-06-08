@@ -1,0 +1,11 @@
+.label--server-name {
+    margin-left: 8px;
+}
+
+.success {
+    color: #26a269; /* Green 5 */
+}
+
+.error {
+    color: #c01c28; /* Red 4 */
+}

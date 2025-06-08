@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.wol" path="/org/gnome/shell/extensions/wol/">
+    <key name="wake-timeout" type="i">
+      <default>60</default>
+      <summary>Wake Timeout (seconds)</summary>
+      <description>How long after wake attempt before marking server as offline</description>
+    </key>
+    <key name="broadcast-ip" type="s">
+      <default>"192.168.1.255"</default>
+      <summary>Network Broadcast IP</summary>
+    </key>
+    <key name="servers" type="s">
+      <default>'[]'</default>
+      <summary>Wake-on-LAN Servers</summary>
+      <description>A list of servers with name, IP and MAC address, encoded as a JSON string</description>
+    </key>
+  </schema>
+</schemalist>

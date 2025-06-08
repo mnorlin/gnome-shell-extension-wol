@@ -1,0 +1,72 @@
+name: Release
+
+on:
+    push:
+        tags:
+            - 'v*.*.*'
+
+env:
+    EXTENSION_ZIP: wol@mnorlin.se.shell-extension.zip
+
+jobs:
+    verify:
+        name: Lint code
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Lint code
+              run: npm run lint
+    package:
+        name: Package
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        needs: [verify]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install gnome-extensions
+              run: sudo apt-get install -y -qq gnome-shell gettext
+
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: 'npm'
+
+            - run: npm ci
+
+            - run: npm run pack
+
+            - name: Upload ZIP-file
+              uses: actions/upload-artifact@v4
+              with:
+                  name: ${{env.EXTENSION_ZIP}}
+                  path: build/${{ env.EXTENSION_ZIP }}
+    release:
+        name: Release on GitHub
+        needs: [package]
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - name: Download artifact
+              uses: actions/download-artifact@v4
+              with:
+                  name: ${{ env.EXTENSION_ZIP }}
+            - name: Release Artifact
+              uses: softprops/action-gh-release@v2
+              with:
+                  tag_name: ${{ steps.release-please.outputs.tag_name }}
+                  files: ${{env.EXTENSION_ZIP}}

@@ -1,0 +1,98 @@
+# This file is distributed under the GNU General Public License
+msgid ""
+msgstr ""
+"Project-Id-Version: wol@mnorlin.se\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-07 22:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: prefs.js:22
+msgid "Wake-on-LAN extension"
+msgstr ""
+
+#: prefs.js:60
+msgid "Add Server"
+msgstr ""
+
+#: prefs.js:70
+#, javascript-format
+msgid "New Server (%d)"
+msgstr ""
+
+#: prefs.js:84
+msgid "Servers"
+msgstr ""
+
+#: prefs.js:96
+msgid "General"
+msgstr ""
+
+#: prefs.js:100 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
+msgid "Wake Timeout (seconds)"
+msgstr ""
+
+#: prefs.js:102 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
+msgid "How long after wake attempt before marking server as offline"
+msgstr ""
+
+#: prefs.js:120 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
+msgid "Network Broadcast IP"
+msgstr ""
+
+#: extension/indicatorButton.js:15 extension/server.js:61
+#: extension/server.js:66
+msgid "Wake-on-LAN"
+msgstr ""
+
+#: extension/server.js:62
+#, javascript-format
+msgid "Server \"%s\" is online"
+msgstr ""
+
+#: extension/server.js:67
+#, javascript-format
+msgid "Server \"%s\" did not wake up"
+msgstr ""
+
+#: extension/statusIcon.js:17
+msgid "Status online"
+msgstr ""
+
+#: extension/statusIcon.js:23
+msgid "Status offline, can be turned on"
+msgstr ""
+
+#: extension/statusIcon.js:29
+msgid "Status offline"
+msgstr ""
+
+#: prefs/serverRow.js:33
+msgid "Delete Server"
+msgstr ""
+
+#: prefs/serverRow.js:100
+msgid "Name"
+msgstr ""
+
+#: prefs/serverRow.js:115
+msgid "MAC Address"
+msgstr ""
+
+#: prefs/serverRow.js:134
+msgid "IP Address or Domain"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.wol.gschema.xml:15
+msgid "Wake-on-LAN Servers"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.wol.gschema.xml:16
+msgid ""
+"A list of servers with name, IP and MAC address, encoded as a JSON string"
+msgstr ""

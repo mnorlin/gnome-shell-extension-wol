@@ -1,0 +1,24 @@
+#!/bin/bash
+
+##
+# Git hook that enforces conventional commits
+# https://www.conventionalcommits.org
+##
+
+RESET='\033[0m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+
+
+if ! head -1 "$1" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(!?)(\(.+?\))?: .{1,}$"; then
+    echo -e "${RED}\nAborting commit. Your commit message is invalid.\n" >&2
+    echo "An example of a valid message is: " >&2
+    echo "  feat(login): add the 'remember me' checkbox" >&2
+    echo "More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary">&2
+    exit 1
+fi
+if ! head -1 "$1" | grep -qE "^.{1,50}$"; then
+    echo -e "${RED}\nAborting commit. Your commit message is too long." >&2
+    echo "Maximum length is 50 characters" >&2
+    exit 1
+fi
