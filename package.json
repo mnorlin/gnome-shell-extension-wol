@@ -1,6 +1,6 @@
 {
     "name": "gnome-shell-extension-wol",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "Send Wake-on-LAN packets to servers",
     "type": "module",
     "private": true,
