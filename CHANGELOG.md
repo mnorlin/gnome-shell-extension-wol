@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-06-08)
+
+
+### Features
+
+* initial commit ([955de42](https://github.com/mnorlin/gnome-shell-extension-wol/commit/955de4265705174399c9b5a540a07fda8509a6f2))
+
 ## [2.0.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.1.0...v2.0.0) (2025-06-07)
 
 
