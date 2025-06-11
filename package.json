@@ -5,7 +5,6 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "prepack": "glib-compile-schemas src/schemas",
         "pack": "mkdir -p ./build && gnome-extensions pack --out-dir ./build --force --extra-source=extension/ --extra-source=prefs/ ./src",
         "predeploy": "npm run pack",
         "deploy": "gnome-extensions install --force ./build/wol@mnorlin.se.shell-extension.zip",

@@ -1,7 +1,7 @@
 # Build
 node_modules/
 build/
-schemas/gschemas.compiled
+src/schemas/gschemas.compiled
 
 # IDE settings
 .vscode/
