@@ -11,21 +11,33 @@ import {
 import ServerRow from './prefs/serverRow.js';
 
 export default class WolPreferences extends ExtensionPreferences {
-    /** @type {InstanceType<ServerRow>[]} this.rows */
-    _serverRows = [];
+    /** @type {InstanceType<ServerRow>[] | null} */
+    _serverRows = null;
 
     /** @param {Adw.PreferencesWindow} window  */
     fillPreferencesWindow(window) {
-        this.settings = this.getSettings();
+        this._serverRows = [];
+        this._settings = this.getSettings();
+        this._serverSettings = this._buildServers();
 
         const page = new Adw.PreferencesPage({
             title: _('Wake-on-LAN extension'),
         });
 
         page.add(this._buildCommon());
-        this._buildServers();
-        page.add(this._serverGroup);
+        page.add(this._serverSettings);
+
         window.add(page);
+        window.connect('close-request', () => {
+            this._serverRows = null;
+            this._settings = null;
+            this._serverSettings = null;
+        });
+
+        this.serverRows = JSON.parse(this._settings.get_string('servers')).map(
+            /** @param {ServerSetting} server */
+            server => new ServerRow(server, this._settings)
+        );
 
         return Promise.resolve();
     }
@@ -36,14 +48,14 @@ export default class WolPreferences extends ExtensionPreferences {
 
     /** @param {InstanceType<ServerRow>[]} updatedRows */
     set serverRows(updatedRows) {
-        this._serverRows.forEach(row => {
-            this._serverGroup.remove(row);
+        this._serverRows?.forEach(row => {
+            this._serverSettings.remove(row);
         });
 
         this._serverRows = updatedRows;
         const bottomIndex = this._serverRows.length - 1;
-        this._serverRows.forEach((row, index) => {
-            this._serverGroup.add(row);
+        this._serverRows?.forEach((row, index) => {
+            this._serverSettings.add(row);
             row.setCallback(this._handleServerAction.bind(this));
 
             row.upButton.set_sensitive(index == 0 ? false : true);
@@ -51,7 +63,7 @@ export default class WolPreferences extends ExtensionPreferences {
         });
 
         const newServers = this._serverRows.map(r => r.server);
-        this.settings.set_string('servers', JSON.stringify(newServers));
+        this._settings.set_string('servers', JSON.stringify(newServers));
     }
 
     _buildServers() {
@@ -76,19 +88,16 @@ export default class WolPreferences extends ExtensionPreferences {
 
             this.serverRows = [
                 ...this.serverRows,
-                new ServerRow(newServer, this.settings),
+                new ServerRow(newServer, this._settings),
             ];
         });
 
-        this._serverGroup = new Adw.PreferencesGroup({
+        const serverGroup = new Adw.PreferencesGroup({
             title: _('Servers'),
             headerSuffix: addButton,
         });
 
-        this.serverRows = JSON.parse(this.settings.get_string('servers')).map(
-            /** @param {ServerSetting} server */
-            server => new ServerRow(server, this.settings)
-        );
+        return serverGroup;
     }
 
     _buildCommon() {
@@ -107,7 +116,7 @@ export default class WolPreferences extends ExtensionPreferences {
                 stepIncrement: 1,
             }),
         });
-        this.settings.bind(
+        this._settings.bind(
             'wake-timeout',
             timeoutEntry,
             'value',
@@ -119,14 +128,14 @@ export default class WolPreferences extends ExtensionPreferences {
         const broadcastEntry = new Adw.EntryRow({
             title: _('Network Broadcast IP'),
         });
-        broadcastEntry.set_text(this.settings.get_string('broadcast-ip'));
+        broadcastEntry.set_text(this._settings.get_string('broadcast-ip'));
         broadcastEntry.connect('notify::text', () => {
             const value = broadcastEntry.text;
             if (value && !IPV4_REGEX.test(value)) {
                 broadcastEntry.add_css_class('error');
             } else {
                 broadcastEntry.remove_css_class('error');
-                this.settings.set_string('broadcast-ip', value);
+                this._settings.set_string('broadcast-ip', value);
             }
         });
         commonGroup.add(broadcastEntry);
