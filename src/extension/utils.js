@@ -1,6 +1,6 @@
 import Gio from 'gi://Gio';
 import St from 'gi://St';
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {ME} from '../extension.js';
 
 /**
  * @template {keyof Settings} T
@@ -8,20 +8,20 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
  * @returns {Settings[T]}
  */
 export function getSetting(setting) {
-    const gSettings = Extension.lookupByURL(import.meta.url).getSettings();
+    const gSettings = ME.getSettings();
     return gSettings.get_value(setting).deepUnpack();
 }
 
 /** @param {IconName} iconName */
 export function getIcon(iconName) {
-    const metadata = Extension.lookupByURL(import.meta.url).metadata;
+    const metadata = ME.metadata;
     return Gio.icon_new_for_string(
         `${metadata.path}/extension/assets/icons/${iconName}.svg`
     );
 }
 
 export function getPath() {
-    return Extension.lookupByURL(import.meta.url).metadata.path;
+    return ME.metadata.path;
 }
 
 export function getScaleFactor() {

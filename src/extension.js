@@ -3,6 +3,9 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import IndicatorButton from './extension/indicatorButton.js';
 
+/** @type {Extension} */
+export let ME = null;
+
 export default class WolExtension extends Extension {
     /** @param {*} metatada  */
     constructor(metatada) {
@@ -10,6 +13,7 @@ export default class WolExtension extends Extension {
     }
 
     enable() {
+        ME = this;
         this.indicator = new IndicatorButton(this.openPreferences.bind(this));
         this.gsettings = this.getSettings();
         Main.panel.addToStatusArea(this.uuid, this.indicator);
