@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.0...v1.0.1) (2025-06-11)
+
+
+### Bug Fixes
+
+* cleanup memory in extension.js when disabling ([70df59c](https://github.com/mnorlin/gnome-shell-extension-wol/commit/70df59c9f92d24e9c8b22add3bf3d35bbc8d2430))
+* cleanup memory in prefs.js when closing ([06a4b7a](https://github.com/mnorlin/gnome-shell-extension-wol/commit/06a4b7aa2818f61d414ffca85f751442c2ad0d68))
+
 ## 1.0.0 (2025-06-08)
 
 
