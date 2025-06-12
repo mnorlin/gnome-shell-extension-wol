@@ -34,5 +34,7 @@ export default class WolExtension extends Extension {
         this.gsettings.disconnect(this._connectHandler);
         this._connectHandler = null;
         this.gsettings = null;
+
+        ME = null;
     }
 }
