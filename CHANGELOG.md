@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.1...v1.0.2) (2025-06-12)
+
+
+### Bug Fixes
+
+* remove reference to 'this' on disable ([53705d3](https://github.com/mnorlin/gnome-shell-extension-wol/commit/53705d3fa13aab70d1194d3b7a04b049a92e216b))
+
 ## [1.0.1](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.0...v1.0.1) (2025-06-11)
 
 
