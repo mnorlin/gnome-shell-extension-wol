@@ -18,7 +18,7 @@ class IndicatorButton extends PanelMenu.Button {
         this._signalIds = [];
 
         const icon = new St.Icon({
-            icon_name: 'network-wired-symbolic',
+            gicon: getIcon('computer-symbolic'),
             icon_size: 16 * getScaleFactor(),
         });
         this.add_child(icon);

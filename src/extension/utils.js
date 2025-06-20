@@ -40,5 +40,6 @@ export function getScaleFactor() {
  * | 'turn-off-symbolic'
  * | 'cross-large-circle-filled-symbolic'
  * | 'check-round-fill-symbolic'
+ * | 'computer-symbolic'
  * } IconName
  */
