@@ -17,7 +17,7 @@
         "@girs/gjs": "4.0.0-beta.25",
         "@girs/gnome-shell": "48.0.2",
         "husky": "9.1.7",
-        "prettier": "3.5.3",
+        "prettier": "3.6.2",
         "typescript": "5.8.3"
     }
 }
