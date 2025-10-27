@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.2...v1.1.0) (2025-06-20)
+
+
+### Features
+
+* add custom made icon ([afb8b90](https://github.com/mnorlin/gnome-shell-extension-wol/commit/afb8b90e524a4ef02ea651483fe9be0343ecc4af))
+
 ## [1.0.2](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.1...v1.0.2) (2025-06-12)
 
 
