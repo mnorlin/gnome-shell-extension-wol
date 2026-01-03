@@ -4,6 +4,6 @@
     "uuid": "wol@mnorlin.se",
     "url": "https://github.com/mnorlin/gnome-shell-extension-wol",
     "settings-schema": "org.gnome.shell.extensions.wol",
-    "shell-version": ["48"],
+    "shell-version": ["48", "49"],
     "gettext-domain": "wol@mnorlin.se"
 }
