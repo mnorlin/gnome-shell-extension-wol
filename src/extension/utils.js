@@ -9,6 +9,8 @@ import {ME} from '../extension.js';
  */
 export function getSetting(setting) {
     const gSettings = ME.getSettings();
+
+    // @ts-ignore TS2322
     return gSettings.get_value(setting).deepUnpack();
 }
 
