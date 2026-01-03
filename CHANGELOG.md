@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.2...v1.1.0) (2026-01-03)
+
+
+### Features
+
+* add custom made icon ([afb8b90](https://github.com/mnorlin/gnome-shell-extension-wol/commit/afb8b90e524a4ef02ea651483fe9be0343ecc4af))
+* add gnome 49 support ([8057edb](https://github.com/mnorlin/gnome-shell-extension-wol/commit/8057edb2f85ee9eaceba7cab8b2149e7e2fd6b2c))
+* create Italian translation ([ed509fd](https://github.com/mnorlin/gnome-shell-extension-wol/commit/ed509fd9967ee2b77153b48b8ce4464349d86b92))
+
+
+### Bug Fixes
+
+* update translations ([6146e92](https://github.com/mnorlin/gnome-shell-extension-wol/commit/6146e921afdcad8067a06373c3ed0337d285fe4e))
+
 ## [1.0.2](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.1...v1.0.2) (2025-06-12)
 
 
