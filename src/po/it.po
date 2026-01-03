@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wol@mnorlin.se\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-07 22:24+0200\n"
+"POT-Creation-Date: 2026-01-03 11:43+0100\n"
 "PO-Revision-Date: 2025-06-13 15:24+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -12,36 +12,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: prefs.js:22
+#: prefs.js:24
 msgid "Wake-on-LAN extension"
 msgstr "Estensione Wake-on-LAN"
 
-#: prefs.js:60
+#: prefs.js:72
 msgid "Add Server"
 msgstr "Aggiungi Server"
 
-#: prefs.js:70
+#: prefs.js:82
 #, javascript-format
 msgid "New Server (%d)"
 msgstr "Nuovo Server (%d)"
 
-#: prefs.js:84
+#: prefs.js:96
 msgid "Servers"
 msgstr "Servers"
 
-#: prefs.js:96
+#: prefs.js:105
 msgid "General"
 msgstr "Generale"
 
-#: prefs.js:100 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
+#: prefs.js:109 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
 msgid "Wake Timeout (seconds)"
 msgstr "Timeout di attivazione (secondi)"
 
-#: prefs.js:102 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
+#: prefs.js:111 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
 msgid "How long after wake attempt before marking server as offline"
-msgstr "Quanto tempo ci vuole dopo il tentativo di attivazione prima di contrassegnare il server come offline"
+msgstr ""
+"Quanto tempo ci vuole dopo il tentativo di attivazione prima di "
+"contrassegnare il server come offline"
 
-#: prefs.js:120 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
+#: prefs.js:129 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
 msgid "Network Broadcast IP"
 msgstr "IP di trasmissione in rete"
 
@@ -96,4 +98,5 @@ msgstr "Server Wake-on-LAN"
 msgid ""
 "A list of servers with name, IP and MAC address, encoded as a JSON string"
 msgstr ""
-"Un elenco di server con nome, IP e indirizzo MAC, codificati come stringa JSON"
+"Un elenco di server con nome, IP e indirizzo MAC, codificati come stringa "
+"JSON"

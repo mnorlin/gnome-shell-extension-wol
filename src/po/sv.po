@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wol@mnorlin.se\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-07 22:24+0200\n"
+"POT-Creation-Date: 2026-01-03 11:43+0100\n"
 "PO-Revision-Date: 2025-06-07 22:36+0200\n"
 "Last-Translator: Martin Norlin <martin@norlin.at>\n"
 "Language-Team: Swedish\n"
@@ -16,37 +16,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 48.0\n"
 
-#: prefs.js:22
+#: prefs.js:24
 msgid "Wake-on-LAN extension"
 msgstr "Wake-on-LAN tillägg"
 
-#: prefs.js:60
+#: prefs.js:72
 msgid "Add Server"
 msgstr "Lägg till server"
 
-#: prefs.js:70
+#: prefs.js:82
 #, javascript-format
 msgid "New Server (%d)"
 msgstr "Ny server (%d)"
 
-#: prefs.js:84
+#: prefs.js:96
 msgid "Servers"
 msgstr "Servrar"
 
-#: prefs.js:96
+#: prefs.js:105
 msgid "General"
 msgstr "Allmänt"
 
-#: prefs.js:100 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
+#: prefs.js:109 schemas/org.gnome.shell.extensions.wol.gschema.xml:6
 msgid "Wake Timeout (seconds)"
 msgstr "Väntetid (sekunder)"
 
-#: prefs.js:102 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
+#: prefs.js:111 schemas/org.gnome.shell.extensions.wol.gschema.xml:7
 msgid "How long after wake attempt before marking server as offline"
 msgstr ""
 "Hur lång tid efter ett väckningsförsök innan servern markeras som avstängd"
 
-#: prefs.js:120 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
+#: prefs.js:129 schemas/org.gnome.shell.extensions.wol.gschema.xml:11
 msgid "Network Broadcast IP"
 msgstr "Nätverkets broadcast-adress"
 
