@@ -1,9 +1,9 @@
 {
     "name": "Wake-on-LAN",
-    "description": "Send Wake-on-LAN (WOL) packets to servers",
+    "description": "This extension lets you view server statuses and power on remote servers directly from a GNOME Shell indicator. Each configured server displays its current online status (checked via ping). If a MAC address is provided, you can send a Wake-on-LAN (WOL) packet to power it on remotely.",
     "uuid": "wol@mnorlin.se",
     "url": "https://github.com/mnorlin/gnome-shell-extension-wol",
     "settings-schema": "org.gnome.shell.extensions.wol",
-    "shell-version": ["48", "49"],
+    "shell-version": ["48", "49", "50"],
     "gettext-domain": "wol@mnorlin.se"
 }
