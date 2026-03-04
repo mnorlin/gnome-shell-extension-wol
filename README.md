@@ -1,6 +1,8 @@
 # Gnome Wake-on-LAN Extension
 
-This GNOME Shell extension lets you manage and power on remote servers directly from a GNOME Shell indicator. Each configured server shows its current online status. If a MAC address is provided, you can send a Wake-on-LAN (WOL) packet to power it on remotely.
+[<img alt="" height="70" align="right" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true">](https://extensions.gnome.org/extension/8239/wake-on-lan/)
+
+This GNOME Shell extension lets you view server statuses and power on remote servers directly from a GNOME Shell indicator. Each configured server displays its current online status (checked via ping). If a MAC address is provided, you can send a Wake-on-LAN (WOL) packet to power it on remotely.
 
 <img alt="A dropdown menu with three listed servers, two online and one offline" src="./screenshot.png" width="300">
 
