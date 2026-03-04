@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.1.0...v4.0.0) (2026-03-04)
+
+
+### Features
+
+* add support for gnome 50 ([be39fd4](https://github.com/mnorlin/gnome-shell-extension-wol/commit/be39fd40dbffab6711f098dce32d67fabc26e647))
+
+
+### Miscellaneous Chores
+
+* version now matches extension version ([b137909](https://github.com/mnorlin/gnome-shell-extension-wol/commit/b137909215e64ef809ea50aa66a4df3bd445359b))
+
 ## [1.1.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.0.2...v1.1.0) (2026-01-03)
 
 
