@@ -15,7 +15,7 @@
     "license": "GPL-3.0-only",
     "devDependencies": {
         "@girs/gjs": "4.1.0",
-        "@girs/gnome-shell": "50.0.0",
+        "@girs/gnome-shell": "50.0.4",
         "husky": "9.1.7",
         "prettier": "3.9.6",
         "typescript": "6.0.3"
