@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v4.0.0...v5.0.0) (2026-09-26)
+
+
+### Features
+
+* add GNOME 51 support ([008d610](https://github.com/mnorlin/gnome-shell-extension-wol/commit/008d6108102de3960790bfbc016d4230a8650128))
+
 ## [4.0.0](https://github.com/mnorlin/gnome-shell-extension-wol/compare/v1.1.0...v4.0.0) (2026-03-04)
 
 
