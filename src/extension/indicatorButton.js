@@ -7,6 +7,7 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 import Server from './server.js';
 import MenuItem from './menuItem.js';
+import PreferencesMenu from './preferencesMenu.js';
 import {getSetting, getIcon, getScaleFactor} from './utils.js';
 
 export default class IndicatorButton extends PanelMenu.Button {
@@ -33,17 +34,14 @@ export default class IndicatorButton extends PanelMenu.Button {
             s => new Server(s)
         );
 
-        if (servers.length == 0) {
-            const pressId = this.connect(
-                'button-press-event',
-                openPreferences.bind(this)
-            );
-
-            this._signalIds.push([this, pressId]);
-        }
-
         /** @type {InstanceType<typeof MenuItem>[]} */
         this._menuItems = [];
+
+        if (servers.length == 0) {
+            this.setMenu(new PreferencesMenu(this, openPreferences));
+            return;
+        }
+
         // @ts-expect-error: missing inherited types in @girs
         const openId = this.menu.connect('open-state-changed', (_, open) => {
             this._menuItems.forEach(item => {
