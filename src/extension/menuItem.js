@@ -7,7 +7,11 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import Server from './server.js';
 import StatusIcon from './statusIcon.js';
 
-class MenuItem extends PopupMenu.PopupBaseMenuItem {
+export default class MenuItem extends PopupMenu.PopupBaseMenuItem {
+    static {
+        GObject.registerClass(this);
+    }
+
     /** @param {Server} server */
     constructor(server) {
         super({activate: false});
@@ -66,5 +70,3 @@ class MenuItem extends PopupMenu.PopupBaseMenuItem {
             : this._server.isAwake());
     }
 }
-
-export default GObject.registerClass(MenuItem);

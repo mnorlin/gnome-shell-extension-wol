@@ -9,7 +9,11 @@ import Server from './server.js';
 import MenuItem from './menuItem.js';
 import {getSetting, getIcon, getScaleFactor} from './utils.js';
 
-class IndicatorButton extends PanelMenu.Button {
+export default class IndicatorButton extends PanelMenu.Button {
+    static {
+        GObject.registerClass(this);
+    }
+
     /** @param {() => void} openPreferences  */
     constructor(openPreferences) {
         super(0, _('Wake-on-LAN'));
@@ -69,7 +73,5 @@ class IndicatorButton extends PanelMenu.Button {
         super.destroy();
     }
 }
-
-export default GObject.registerClass(IndicatorButton);
 
 /** @typedef {import('./server.js').ServerSetting} ServerSettings */

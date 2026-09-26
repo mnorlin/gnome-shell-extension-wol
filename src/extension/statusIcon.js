@@ -5,7 +5,11 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 import {getIcon, getScaleFactor} from './utils.js';
 
-class StatusIcon extends St.BoxLayout {
+export default class StatusIcon extends St.BoxLayout {
+    static {
+        GObject.registerClass(this);
+    }
+
     constructor() {
         super();
 
@@ -63,4 +67,3 @@ class StatusIcon extends St.BoxLayout {
         }
     }
 }
-export default GObject.registerClass(StatusIcon);

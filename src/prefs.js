@@ -11,7 +11,7 @@ import {
 import ServerRow from './prefs/serverRow.js';
 
 export default class WolPreferences extends ExtensionPreferences {
-    /** @type {InstanceType<ServerRow>[] | null} */
+    /** @type {InstanceType<typeof ServerRow>[] | null} */
     _serverRows = null;
 
     /** @param {Adw.PreferencesWindow} window  */
@@ -46,7 +46,7 @@ export default class WolPreferences extends ExtensionPreferences {
         return this._serverRows;
     }
 
-    /** @param {InstanceType<ServerRow>[]} updatedRows */
+    /** @param {InstanceType<typeof ServerRow>[]} updatedRows */
     set serverRows(updatedRows) {
         this._serverRows?.forEach(row => {
             this._serverSettings.remove(row);
@@ -145,7 +145,7 @@ export default class WolPreferences extends ExtensionPreferences {
 
     /**
      * @param {ServerAction} action
-     * @param {InstanceType<ServerRow>} row
+     * @param {InstanceType<typeof ServerRow>} row
      */
     _handleServerAction(action, row) {
         if (action == 'delete') {

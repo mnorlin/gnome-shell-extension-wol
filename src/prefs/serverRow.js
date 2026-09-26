@@ -4,7 +4,11 @@ import Adw from 'gi://Adw';
 
 import {gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-class ServerRow extends Adw.ExpanderRow {
+export default class ServerRow extends Adw.ExpanderRow {
+    static {
+        GObject.registerClass(this);
+    }
+
     /** @type {Callback} */
     _callback;
 
@@ -148,8 +152,6 @@ class ServerRow extends Adw.ExpanderRow {
         return ipEntry;
     }
 }
-
-export default GObject.registerClass(ServerRow);
 
 /**
  * @typedef {import('../extension/server.js').ServerSetting} ServerSetting
